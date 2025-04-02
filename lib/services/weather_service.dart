@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/weather.dart';
 
 class WeatherService {
-  final String baseUrl = 'http://localhost:5000/api/weather';
+  final String baseUrl = 'http://192.168.0.27:5000/api/weather';
 
   Future<Weather> getWeather(String city, String token) async {
     final response = await http.get(
