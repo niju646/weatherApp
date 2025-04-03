@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:weatherapp/models/weather.dart';
 import 'package:weatherapp/providers/auth_provider.dart';
+import 'package:weatherapp/screens/weather_news_screen.dart';
 import 'package:weatherapp/services/weather_service.dart';
 
 class WeatherDashboard extends StatefulWidget {
@@ -62,7 +63,7 @@ class _WeatherDashboardState extends State<WeatherDashboard> {
                 SizedBox(height: 50,),
                 TextField(
                   controller: _cityController,
-                  decoration: InputDecoration(
+                  decoration: InputDecoration( 
                     labelText: "City",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -113,7 +114,14 @@ class _WeatherDashboardState extends State<WeatherDashboard> {
                     'Description: ${_weather!.description}',
                     style: const TextStyle(fontSize: 20),
                   ),
-                ]
+                ],
+                // Add this to the Column in WeatherDashboard
+// ElevatedButton(
+//   onPressed: () {
+//    // Navigator.push(context, MaterialPageRoute(builder: (_) => WeatherNewsScreen()));
+//   },
+//   child: Text('View Latest Weather News'),
+// ),
               ],
             ),
           ),
